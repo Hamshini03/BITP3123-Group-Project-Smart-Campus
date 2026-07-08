@@ -68,10 +68,11 @@ The Course Enrolment Service (Port 8082) manages the academic registration lifec
 </p>
 
 ---
-# 3. Notification Service
+# 3. Library Booking Service
 
 ---
-# 4. Library Booking Service
+# 4. Notification Service Module
+The Notification Service (Port 8084) is a independent module responsible for managing and tracking automated campus alerts, such as Email and SMS messages. To ensure maximum system performance, this service operates using a non-blocking communication model. It exposes a specific URL endpoint that waits for other modules (such as the Course Enrolment or Library Book Booking services) to send message data over the network. When a new message package arrives, the service extracts the details, creates a unique 8-character tracking number using UUID logic, and saves the record into a MySQL database table. At the same time, it prints the transaction details directly onto the computer terminal screen to verify that the communication was successfully processed.
 
 ---
 # 5. Reporting Analytics Service
