@@ -68,7 +68,29 @@ The Course Enrolment Service (Port 8082) manages the academic registration lifec
 </p>
 
 ---
-# 3. Library Booking Service
+# 3. Library Booking Service Module
+The Library Book Booking Service (Port 8083) manages the academic literature reservation lifecycle, allowing students to book and reserve library textbooks and reference materials. To maintain strict data integrity, this service does not operate in isolation; instead, it relies on a multithreaded synchronous-to-asynchronous hybrid architecture. Upon receiving a booking request, it utilizes a background worker thread via Java's ExecutorService to seamlessly query the Student Profile Service (Port 8081) via an HTTP GET request. This step ensures that the student record actually exists and is active before changing the book reservation status from pending to RESERVED. Once validation succeeds and database persistence is complete, the service emits a fire-and-forget asynchronous data payload to the network to trigger student alerts.
+
+## MySQL
+<p align="center">
+<img width="691" height="201" alt="image" src="https://github.com/user-attachments/assets/3ebb2f0f-be6d-4c04-9f7c-3415f8914057" />
+</p>
+
+---
+## Retrieves a list of all library book bookings
+<p align="center">
+<img width="640" height="971" alt="Screenshot 2026-07-08 221622" src="https://github.com/user-attachments/assets/2bbfb3ca-1b44-47aa-92e6-f04292c1e843" />
+</p>
+
+## Book a library book
+<p align="center">
+<img width="723" height="426" alt="Screenshot 2026-07-08 214825" src="https://github.com/user-attachments/assets/985588eb-dbf1-405b-ac0a-455b8469ebab" />
+</p>
+
+## Check book reservation status by Tracking ID
+<p align="center">
+<img width="642" height="423" alt="Screenshot 2026-07-08 215333" src="https://github.com/user-attachments/assets/976b3fa9-43e6-4a49-b8be-048db0f76960" />
+</p>
 
 ---
 # 4. Notification Service Module
