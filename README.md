@@ -34,5 +34,5 @@ The Student Profile Service (Port 8081) serves as the foundational core and cent
 ---
 
 # Course Enrolment Service Module
-
+The Course Enrolment Service (Port 8082) manages the academic registration lifecycle, allowing students to enroll in specific campus courses. To maintain strict data integrity, this service does not operate in isolation; instead, it relies on a multithreaded synchronous-to-asynchronous hybrid architecture. Upon receiving an enrollment request, it utilizes a background worker thread via Java's ExecutorService to seamlessly query the Student Profile Service (Port 8081) via an HTTP GET request. This step ensures that the student record actually exists and is active before changing the enrollment status from pending to CONFIRMED. Once validation succeeds and database persistence is complete, the service emits a fire-and-forget asynchronous data payload to the network to trigger student alerts.
 
