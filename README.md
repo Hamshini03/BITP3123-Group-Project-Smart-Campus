@@ -6,4 +6,8 @@ B032510636 NIK AFIQAH NAJIHAH BINTI NIK SUKIMAN,
 B032510606 ANIS SYAFIQAH BINTI SYAFRIZAN, B032510625
 
 
-# Course booking Services
+# Student Profile Service Module
+The Student Profile Service (Port 8081) serves as the foundational core and centralized "Source of Truth" for the entire SmartCampus microservices ecosystem. It is solely responsible for managing student identities, maintaining profile states, and anchoring records securely within a dedicated MySQL database. By decoupling identity management from other business logic, this module establishes a reliable registry where dependent services—such as Course Enrolment and Library Booking—can execute synchronous HTTP validation checks in real time. Without this critical checkpoint actively processing queries and verifying the legitimacy of a student's id and status field, downstream transactions across the network are automatically halted, effectively preventing orphaned data entries or fraudulent campus activities.
+
+<img width="443" height="172" alt="image" src="https://github.com/user-attachments/assets/4f596807-f153-4af5-bd3c-e21e2e81c314" />
+
