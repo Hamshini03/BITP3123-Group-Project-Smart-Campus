@@ -87,7 +87,7 @@ The Library Book Booking Service (Port 8083) manages the academic literature res
 <img width="723" height="426" alt="Screenshot 2026-07-08 214825" src="https://github.com/user-attachments/assets/985588eb-dbf1-405b-ac0a-455b8469ebab" />
 </p>
 
-## Check book reservation status by Tracking ID
+## Check book reservation status by Booking ID
 <p align="center">
 <img width="642" height="423" alt="Screenshot 2026-07-08 215333" src="https://github.com/user-attachments/assets/976b3fa9-43e6-4a49-b8be-048db0f76960" />
 </p>
