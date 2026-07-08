@@ -46,3 +46,9 @@ The Course Enrolment Service (Port 8082) manages the academic registration lifec
 <p align="center">
 <img width="678" height="807" alt="image" src="https://github.com/user-attachments/assets/d4d14dcb-08e9-4905-8cf2-111efb2a9e06" />
 </p>
+
+## Enrol student course
+<p align="center">
+<img width="1572" height="400" alt="image" src="https://github.com/user-attachments/assets/1f6b9328-9558-4234-b1a0-a748e12375a9" />
+</p>
+
