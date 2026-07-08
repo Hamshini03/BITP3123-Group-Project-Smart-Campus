@@ -57,4 +57,22 @@ The Course Enrolment Service (Port 8082) manages the academic registration lifec
 <img width="1576" height="393" alt="image" src="https://github.com/user-attachments/assets/03309fd1-19a4-4fd9-ada3-1b543c3eb843" />
 </p>
 
+---
+### 5. Reporting Analytics Service
 
+Reporting Analytics Service is used to collect and analyse data from different services in the system.
+
+Functions:
+- Generate campus activity reports
+- Display system statistics
+- Analyse student and service data
+- Provide summary reports for administrators
+
+---
+## Technologies Used
+
+- Java Spring Boot
+- REST API
+- Maven
+- MySQL Database
+- GitHub
