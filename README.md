@@ -102,6 +102,10 @@ The Notification Service (Port 8084) is a independent module responsible for man
 ## Booking Book Notification
 <img width="557" height="111" alt="image" src="https://github.com/user-attachments/assets/7312ef90-74be-44ad-8d96-40085d368a42" />
 
+## MySQL Database Notification
+<img width="636" height="240" alt="image_2026-07-08_23-42-14" src="https://github.com/user-attachments/assets/6056316a-c922-4220-a8ee-087b31acd1b3" />
+
+
 ---
 # 5. Reporting Analytics Service
 
