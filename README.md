@@ -31,6 +31,7 @@ The Student Profile Service (Port 8081) serves as the foundational core and cent
 <img src="https://github.com/user-attachments/assets/4f596807-f153-4af5-bd3c-e21e2e81c314" width="500">
 </p>
 
+---
 
 # Course Enrolment Service Module
 
