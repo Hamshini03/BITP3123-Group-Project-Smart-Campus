@@ -9,10 +9,10 @@ B032510606 ANIS SYAFIQAH BINTI SYAFRIZAN, B032510625
 # Student Profile Service Module
 The Student Profile Service (Port 8081) serves as the foundational core and centralized "Source of Truth" for the entire SmartCampus microservices ecosystem. It is solely responsible for managing student identities, maintaining profile states, and anchoring records securely within a dedicated MySQL database. By decoupling identity management from other business logic, this module establishes a reliable registry where dependent services—such as Course Enrolment and Library Booking—can execute synchronous HTTP validation checks in real time. Without this critical checkpoint actively processing queries and verifying the legitimacy of a student's id and status field, downstream transactions across the network are automatically halted, effectively preventing orphaned data entries or fraudulent campus activities.
 
-Postman Success (Onboarding a All Students Info): 
+Postman Success (Onboarding All Students Info): 
 <img width="570" height="966" alt="image" src="https://github.com/user-attachments/assets/c84dd275-e7bc-4979-a8a6-6bac63f9d907" />
 
-Postman Success (Onboarding a Students Info by ID): 
+Postman Success (Onboarding Students Info by ID): 
 <img width="592" height="381" alt="image" src="https://github.com/user-attachments/assets/ff5a4fa1-387f-4e4e-a22b-506bb6923e7a" />
 
 MySQL Workbench (Data Persistence):
