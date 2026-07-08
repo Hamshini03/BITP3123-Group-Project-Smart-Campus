@@ -14,7 +14,10 @@ The main purpose of this system is to improve campus service management by separ
 # Modules Available:
 
 # 1. Student Profile Service Module
-The Student Profile Service (Port 8081) serves as the foundational core and centralized "Source of Truth" for the entire SmartCampus microservices ecosystem. It is solely responsible for managing student identities, maintaining profile states, and anchoring records securely within a dedicated MySQL database. By decoupling identity management from other business logic, this module establishes a reliable registry where dependent services—such as Course Enrolment and Library Booking—can execute synchronous HTTP validation checks in real time. Without this critical checkpoint actively processing queries and verifying the legitimacy of a student's id and status field, downstream transactions across the network are automatically halted, effectively preventing orphaned data entries or fraudulent campus activities.
+The Student Profile Service (Port 8081) is the main service in the SmartCampus system. It manages student information, including student IDs, personal details, and account status, using its own MySQL database. This service acts as the main source of student data for the other services in the system.
+
+Other services, such as the Course Enrolment Service and Library Booking Service, check this service to confirm that a student ID is valid and active before completing any request. If the student information is invalid or the account is inactive, the request is rejected. This helps keep the data accurate and prevents invalid or duplicate records from being created.
+
 
 ## Retrieve All Students
 
