@@ -13,6 +13,6 @@ Postman Success (Onboarding a Student): <img width="570" height="966" alt="image
 
 
 
-MySQL Workbench (Data Persistence):
-<img width="443" height="172" alt="image" src="https://github.com/user-attachments/assets/4f596807-f153-4af5-bd3c-e21e2e81c314" />
+MySQL Workbench (Data Persistence): <img width="443" height="172" alt="image" src="https://github.com/user-attachments/assets/4f596807-f153-4af5-bd3c-e21e2e81c314" />
+
 
