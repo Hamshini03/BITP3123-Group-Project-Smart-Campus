@@ -5,6 +5,13 @@ NURUL AIN QAMARIAH BINTI ZAMZILAFAZLIN, B032510636
 NIK AFIQAH NAJIHAH BINTI NIK SUKIMAN, B032510606 
 ANIS SYAFIQAH BINTI SYAFRIZAN, B032510625
 
+# Project Overview
+SmartCampus Connect System is a distributed campus management system that provides several services to manage campus activities efficiently. 
+The system is designed using a service-based architecture where each module works independently and communicates through REST API. It allows students and administrators to manage student profiles, course enrolment, notifications, library activities, and reporting analytics in a more organized way.
+The main purpose of this system is to improve campus service management by separating different functionalities into individual services that can be maintained and updated easily.
+
+---
+# Modules Available:
 
 # 1. Student Profile Service Module
 The Student Profile Service (Port 8081) serves as the foundational core and centralized "Source of Truth" for the entire SmartCampus microservices ecosystem. It is solely responsible for managing student identities, maintaining profile states, and anchoring records securely within a dedicated MySQL database. By decoupling identity management from other business logic, this module establishes a reliable registry where dependent services—such as Course Enrolment and Library Booking—can execute synchronous HTTP validation checks in real time. Without this critical checkpoint actively processing queries and verifying the legitimacy of a student's id and status field, downstream transactions across the network are automatically halted, effectively preventing orphaned data entries or fraudulent campus activities.
@@ -58,6 +65,12 @@ The Course Enrolment Service (Port 8082) manages the academic registration lifec
 </p>
 
 ---
+# 3. Notification Service
+
+---
+# 4. Library Booking Service
+
+---
 # 5. Reporting Analytics Service
 
 SmartCampus Connect System. This service is responsible for collecting and processing important system information to provide administrators with a clear overview of campus activities. Using REST API communication, the service retrieves relevant data from other modules and processes the information to generate a summarized analytics report. The generated summary allows administrators to monitor key statistics and support better decision-making across the campus management system.
@@ -74,10 +87,10 @@ The summary report provides a quick overview of system data by displaying collec
 Method: GET
 
 ---
-## Technologies Used
-
+# Technologies Used
 - Java Spring Boot
 - REST API
 - Maven
 - MySQL Database
+- Postman
 - GitHub
