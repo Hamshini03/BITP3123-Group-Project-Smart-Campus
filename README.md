@@ -6,7 +6,7 @@ NIK AFIQAH NAJIHAH BINTI NIK SUKIMAN, B032510606
 ANIS SYAFIQAH BINTI SYAFRIZAN, B032510625
 
 
-# Student Profile Service Module
+# 1. Student Profile Service Module
 The Student Profile Service (Port 8081) serves as the foundational core and centralized "Source of Truth" for the entire SmartCampus microservices ecosystem. It is solely responsible for managing student identities, maintaining profile states, and anchoring records securely within a dedicated MySQL database. By decoupling identity management from other business logic, this module establishes a reliable registry where dependent services—such as Course Enrolment and Library Booking—can execute synchronous HTTP validation checks in real time. Without this critical checkpoint actively processing queries and verifying the legitimacy of a student's id and status field, downstream transactions across the network are automatically halted, effectively preventing orphaned data entries or fraudulent campus activities.
 
 ## Retrieve All Students
@@ -33,7 +33,7 @@ The Student Profile Service (Port 8081) serves as the foundational core and cent
 
 ---
 
-# Course Enrolment Service Module
+# 2. Course Enrolment Service Module
 The Course Enrolment Service (Port 8082) manages the academic registration lifecycle, allowing students to enroll in specific campus courses. To maintain strict data integrity, this service does not operate in isolation; instead, it relies on a multithreaded synchronous-to-asynchronous hybrid architecture. Upon receiving an enrollment request, it utilizes a background worker thread via Java's ExecutorService to seamlessly query the Student Profile Service (Port 8081) via an HTTP GET request. This step ensures that the student record actually exists and is active before changing the enrollment status from pending to CONFIRMED. Once validation succeeds and database persistence is complete, the service emits a fire-and-forget asynchronous data payload to the network to trigger student alerts.
 
 ## MySQL
@@ -58,15 +58,20 @@ The Course Enrolment Service (Port 8082) manages the academic registration lifec
 </p>
 
 ---
-### 5. Reporting Analytics Service
+# 5. Reporting Analytics Service
 
-Reporting Analytics Service is used to collect and analyse data from different services in the system.
+SmartCampus Connect System. This service is responsible for collecting and processing important system information to provide administrators with a clear overview of campus activities. Using REST API communication, the service retrieves relevant data from other modules and processes the information to generate a summarized analytics report. The generated summary allows administrators to monitor key statistics and support better decision-making across the campus management system.
 
-Functions:
-- Generate campus activity reports
-- Display system statistics
-- Analyse student and service data
-- Provide summary reports for administrators
+## Function Available
+
+#### Summary Report
+The summary report provides a quick overview of system data by displaying collected information from different services.
+
+## Postman Result:
+
+#### Get Summary Report
+
+Method: GET
 
 ---
 ## Technologies Used
